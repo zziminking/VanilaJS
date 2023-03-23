@@ -8,7 +8,7 @@ function onLoginEvent(e) {
     e.preventDefault();
     loginForm.classList.add(HIDDEN);
     const username = loginInput.value;
-    localStorage.setItem(USERNAME,username);
+    localStorage.setItem(USERNAME, username);
     paintGreetings(localUser);
 }
 
@@ -21,7 +21,7 @@ const localUser = localStorage.getItem(USERNAME);
 
 if (localUser === null) {
     loginForm.classList.remove(HIDDEN);
-    loginForm.addEventListener('submit',onLoginEvent);
-}else {
+    loginForm.addEventListener('submit', onLoginEvent);
+} else {
     paintGreetings(localUser);
 }
